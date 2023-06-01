@@ -11,5 +11,6 @@ namespace UserRegistrationWithLambda
     {
         public const string NAME = @"^[A-Z][a-z]{2,}$";
         public bool ValidateFirstNameByLambda() => Regex.IsMatch(Console.ReadLine(), NAME) ? true : false;
+        public bool ValidateLastNameByLambda() => Regex.IsMatch(Console.ReadLine(), NAME) ? true : false;
     }
 }
