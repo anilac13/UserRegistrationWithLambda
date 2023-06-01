@@ -10,7 +10,9 @@ namespace UserRegistrationWithLambda
     public class Validation
     {
         public const string NAME = @"^[A-Z][a-z]{2,}$";
+        public const string EMAIL = @"^[a-zA-z0-9.+-]+[@][a-zA-z0-9]+[.][a-zA-z0-9.]{2,}$";
         public bool ValidateFirstNameByLambda() => Regex.IsMatch(Console.ReadLine(), NAME) ? true : false;
         public bool ValidateLastNameByLambda() => Regex.IsMatch(Console.ReadLine(), NAME) ? true : false;
+        public bool ValidateEmailByLambda() => Regex.IsMatch(Console.ReadLine(), EMAIL) ? true : false;
     }
 }
