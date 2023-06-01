@@ -9,7 +9,7 @@ namespace UserRegistrationWithLambda
             Validation reg = new Validation();
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Validate first name \n2.Validate last name \n3.Validate E-Mail \n4.Validate Phone Number \n5.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Validate first name \n2.Validate last name \n3.Validate E-Mail \n4.Validate Phone Number \n5.Validate Password \n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -46,6 +46,14 @@ namespace UserRegistrationWithLambda
                             Console.WriteLine("Invalid");
                         break;
                     case 5:
+                        Console.WriteLine("Enter Password");
+                        bool password = reg.ValidatePasswordByLamda();
+                        if (password)
+                            Console.WriteLine("Valid");
+                        else
+                            Console.WriteLine("Invalid");
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
